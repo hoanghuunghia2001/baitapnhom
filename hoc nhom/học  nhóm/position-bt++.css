@@ -1,0 +1,151 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "segoe ui";
+}
+.bocngoai {
+	width: 100%;
+	height: 400px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.motthe {
+	width: 250px;
+	height: 397px;
+	/*background: grey;*/
+	margin: 0 auto;
+	border: 1px solid #e2e2e2;
+	position: relative;
+	box-sizing: border-box;
+	box-shadow: 2px 2px 6px 0px grey;
+}
+.motthe img.avt {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	/* padding: 39px 39px; */
+	position: absolute;
+	top: 59px;
+	left: 50%;
+	z-index: 2;
+	transform: translateX(-50%)!important;
+	transition: 0.4s;
+
+}
+.motthe h3 {
+	text-align: center;
+	font-size: 23px;
+	margin-bottom: 3px;
+	margin-top: 40px;
+	margin-top: 258px;
+}
+.motthe p {
+	text-align: center;
+	font-size: 16px;
+	color: #676767;
+}
+.motthe .show {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	overflow: hidden;
+	transition: 0.4s;
+	/*background: silver;*/
+}
+.show .tren:before {
+	content: "";
+	position: absolute;
+	top: 219px;
+	width: 150px;
+	height: 150px;
+	background: #3769d4;
+	border-radius: 50%;
+	z-index: 1;
+	left: 84px;
+	transform: scale(0);
+	animation: showup 1s forwards;
+	animation-delay: 0.5s;
+}
+.show .tren:after {
+	content: "";
+	position: absolute;
+	top: 228px;
+	width: 130px;
+	height: 130px;
+	background: #7cc7ff;
+	border-radius: 50%;
+	z-index: 1;
+	left: 94px;
+	transform: scale(0);
+	animation: showup 1s forwards;
+	animation-delay: 0.5s;
+}
+.show .tren {
+	background: #3769d4;
+	width: 320px;
+	height: 313px;
+	border-radius: 50%;
+	position: absolute;
+	top: -167px;
+	left: -33px;
+}
+/*.show .tren:hover {
+	
+}*/
+.motthe .duoi {
+	width: 100%;
+	height: 10%;
+	background: #3769d4;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	transition: 0.4s;
+}
+.duoi .icon {
+	width: 25px;
+	height: 25px;
+	/* background: yellow; */
+	z-index: 10;
+	margin-top: 9px;
+	margin-left: 9px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+img.icon:hover {
+    transform: scale(1.2);
+}
+.duoi .icon:nth-child(1) {
+	margin-left: 57px;
+}
+.motthe .show,
+.motthe .duoi {
+	opacity: 0;
+}
+.motthe:hover .duoi,
+.motthe:hover .show {
+	opacity: 1;
+	visibility: visible;
+}
+.motthe:hover > img.avt {
+	height: 115px;
+	width: 115px;
+	top: 69px;	
+	left: 51%;
+}
+@keyframes showup {
+	from {
+		transform: scale(0);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}

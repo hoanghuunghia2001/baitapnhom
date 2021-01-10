@@ -1,0 +1,9 @@
+.box{
+    height: 800px;
+    width: 800px;
+    border: 50px solid transparent;
+    /* background-color: violet; */
+    border-top: 50px solid green;
+    border-radius: 50%;
+    background-color: violet;
+}

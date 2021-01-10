@@ -1,0 +1,428 @@
+/* code for top-nav */
+/* Ãƒâ€žÃ‚ÂÃƒÂ¡Ã‚Â»Ã…Â nh nghÃƒâ€žÃ‚Â©a biÃƒÂ¡Ã‚ÂºÃ‚Â¿n */
+:root{
+  --icon-color:#dbdbdb;
+  --icon-color-2: rgb(96,96,96);
+  --icon-size: 1.1em;
+  --search-box-background-color:  #303030;
+  --muted-icon-color: rgb(154,154,154);
+  --text-color: rgb(73,73,73);
+  --height-top-nav:50px;
+  --p-color:#606060;
+  --boder-color:rgb(144,144,144);
+  --heightvideo:320px ;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body{
+  /* background-color: beige; */
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.top-nav{
+  width: 100%;
+  height: var(--height-top-nav);
+  padding: 0 16px;
+  background-color: rgb(37,37,37);
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+i.fas{
+  color: var(--icon-color);
+  font-size: var(--icon-size);
+}
+.top-nav-logo{
+  height: 100%;
+  width: 15%;
+  background-color: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-nav-logo p{
+  color: white;
+  font-size: 1rem;
+}
+i.fab.fa-youtube{
+  display: block;
+  float: left;
+  color: red;
+  font-size: 1.5rem;
+  padding-right: 3px;
+}
+
+.top-nav form{
+  width: 71%;
+  height: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-nav-search{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-nav-search input[type="text"] {
+  height: 100%;
+  width: 50%;
+  background-color: var(--search-box-background-color);
+  color: #dbdbdb;
+  border: none;
+  box-sizing: border-box;
+  padding:5px;
+  font-size: 0.9rem;
+}
+.top-nav-search input[type="text"]:focus{
+  outline: none;
+}
+.top-nav-search .keyboard-icon{
+  height: 100%;
+  width: 5%;
+  background-color: var(--search-box-background-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.keyboard-icon a span.far.fa-keyboard{
+  color: var(--icon-color);
+}
+.top-nav-search .keyboard-icon a{
+  text-decoration: none;
+}
+  .keyboard-icon a span.far.fa-keyboard:hover{
+  color:#e9e8e8;
+}
+form button.search-button{
+  width: 7%;
+  height: 100%;
+  background-color: rgb(54,54,54);
+  border: none;
+  cursor: pointer;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ button.search-button .search-icon i{
+  font-size: 0.7rem;
+  color: var(--muted-icon-color);
+}
+.search-tooltip{
+  height: 120%;
+  width: 120%;
+  padding: 0 10px;
+  background-color: rgb(54,54,54);
+  border-radius: 2px;
+  color: white;
+  font-size: 12px;
+  transition: .25s;
+  opacity: 0;
+  visibility: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  z-index: 10;
+}
+button.search-button:hover .search-tooltip{
+  opacity: 1;
+  visibility: visible;
+}
+button.search-button:focus{
+  outline:none;
+}
+button.search-button:hover .search-icon i{
+  color: rgb(185, 185, 185);
+}
+.top-nav .top-nav-user-icon{
+  height: 100%;
+  width: 13%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-nav-user-icon .user-icon{
+  width: 25%;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-icon .user-avatar{
+  height: 1.7rem;
+  width: 1.7rem;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+}
+.user-avatar img{
+  height: 100%;
+  width: 100%;
+}
+span.video-tooltip, span.folder-tooltip, span.bell-tooltip {
+  height: 30px;
+  top: 53px;
+  left: -8px;
+  border-radius: 3px;
+  background-color: var(--search-box-background-color);
+}
+.user-icon:hover span.video-tooltip{
+  opacity: 1;
+  visibility: visible;
+}
+span.folder-tooltip{
+  width: 140px;
+  left: -40px;
+}
+span.bell-tooltip{
+  width: 80px;
+}
+.user-icon:hover span.folder-tooltip{
+  opacity: 1;
+  visibility: visible;
+}
+.user-icon:hover span.bell-tooltip{
+  opacity: 1;
+  visibility: visible;
+}
+/* code cho container homepage*/
+.homepage{
+height: auto;
+padding: 0;
+/* overflow: hidden; */
+}
+.left-menu{
+height: calc(100vh - var(--height-top-nav));
+background-color: #fff;
+float: left;
+padding: 0;
+
+/* white-space: nowrap; */
+}
+.left-menu:hover{
+  overflow: hidden;
+overflow-y: scroll;
+}
+/* dieu chinh do rong cua thanh cuon */
+.left-menu::-webkit-scrollbar{
+width: 10px;
+
+/* background-color: #F5f5f5; */
+}
+/* dieu chinh mau thanh cuon */
+.left-menu::-webkit-scrollbar-thumb{
+background-color: var(--icon-color);
+}
+.right-content{
+height: 100vh;
+background-color:#e9e9e9;
+float: left;
+
+overflow: hidden;
+overflow-y: scroll;
+}
+.right-content::-webkit-scrollbar{
+  width: 10px;
+  
+  /* background-color: #F5f5f5; */
+  }
+  /* dieu chinh mau thanh cuon */
+  .right-content::-webkit-scrollbar-thumb{
+  background-color: var(--icon-color);
+  }
+.text{
+/* background-color: red; */
+}
+.left-menu ul.left-menu-list{
+list-style: none;
+width: 100%;
+padding: 18px 0;
+border-bottom: 1px solid silver;
+
+}
+
+.left-menu ul.left-menu-list li{
+/* background-color: silver; */
+width: 100%;
+height: 2rem;
+cursor: pointer;
+
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.left-menu ul.left-menu-list li a{text-decoration: none;color: var(--icon-color-2);font-size: 14px;}
+.left-menu ul.left-menu-list li i.fas,
+.left-menu ul.left-menu-list li i.fab{color: var(--icon-color-2);float: right;transform: translateY(6px);font-size: 16px;}
+.left-menu ul.left-menu-list li .li-row{
+width: 100%;
+}
+.li-row .col-12{
+padding: 0;
+}
+.li-row .col-12 .col-2,
+.li-row .col-12 .col-10 {
+float: left;
+padding-right: 0;
+}
+h4.menu-left-title {
+padding-left: 19px;
+font-size: 12px;
+}
+ul.content-list{
+padding: 15px 0px;
+}
+ul.content-list li {
+font-size: 13px;
+padding: 0 23px;
+font-weight: 500;
+}
+ul li:hover{
+  background-color: #ededed;
+}
+.right-content-row-list-video{
+  /* background-color: red; */
+  float: left;
+  height: var(--heightvideo);
+  margin-top: 15px;
+}
+.right-content-row-list-video-img{
+  height: 66%;
+  width: 100%;
+  background-image: url(images/avt.jpg);
+  cursor: pointer;
+}
+.right-content-row-list-video h4{
+  font-size: 18px;
+}
+.right-content-row-list-video p{
+  font-size: 16px;
+  color: var(--p-color);
+}
+.new-news{
+  width: 100%;
+  height: var(--heightvideo);
+  /* background-color:aqua ; */
+  border-top: 2px solid var(--boder-color);
+  border-bottom: 2px solid var(--boder-color);
+  margin-left: 18px;
+  /* padding-left: 16px; */
+
+  /* padding-right: 10px; */
+
+}
+.new-news h3{
+  margin-top: 1%;
+  padding-left: 10px;
+  font-size: 23px;
+}
+.new-news .new-news-video{
+  
+  height: 95%;
+  /* background-color: bisque; */
+  border:  .2px solid rgb(206, 206, 206);
+  
+  margin-top: 1%;
+  float: left;
+  
+
+}
+.new-news-video-content{
+  width: 100%;
+  height: 70%;
+  /* background-color: red; */
+  padding: 0;
+
+  /* border: 1px solid rgb(73,73,73) ; */
+}
+.new-news-video-content .list{
+  width: 100%;
+  height: 100%;
+  /* background-attachment: orange; */
+  float: left;
+  z-index: 10;
+  padding: 0;
+}
+.new-news-video-content  .img{
+  height: 100%;
+  width: 100%;
+}
+ .new-news-video-content  .img {
+  height: 100%;
+  width: 100%;
+  background-image: url(images/avt1.jpg);
+  background-repeat: no-repeat;
+  background-size:-webkit-auto;
+  border-radius: 5px;
+
+}
+.emotions{
+  margin-top: 6px;
+  height: 30px;
+  width: 100%;
+  /* background-color: rosybrown; */
+
+}
+.emotions .icon{
+  height: 100%;
+  width: 30px;
+  /* background-color: royalblue; */
+  float: left;
+  cursor: pointer;
+  z-index: 10;
+
+}
+.emotions .text{
+  margin-right: 10px; 
+  margin-left: 5px;
+}
+.emotions  .fas {
+  font-size: 18px;
+  color: #c2c2c2;
+} 
+.emotions .chat{
+  margin-left: 150px;
+  margin-right: 5px;
+}
+.emotions .icon p{
+  font-size: 15px;
+  color: #c2c2c2;
+  
+}
+.emotions .fas:hover{
+  color:#0e0d0d;  
+}
+.new-news-text{
+  width: 100%;
+  height: 50px;
+  /* background-color:aqua; */
+}
+.new-news-content{
+  width: 100%;
+  height: 60%;
+  /* background-color: blueviolet; */
+}
+ 
+ 

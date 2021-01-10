@@ -1,0 +1,71 @@
+ .khung{
+    height: 35vh;
+    width: 100%;
+    background:rgb(252, 252, 252);
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+ 
+}
+.khung .o{
+    height: 100%;
+    width: 30vh;
+    /* background: turquoise; */
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+  
+ 
+
+}
+.o img{
+    height: 100%;
+    width: 100%;
+}
+.khung .o .content{
+    background: rgba(228, 175, 77, 0.5);
+    height: 95%;
+    width: 95%;
+    position: absolute ;
+    border: 2px solid white;
+    margin: 1% 1%;
+    cursor: pointer;
+    transition: 0.6s;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    /* overflow: scroll; */
+   
+    
+
+}
+.khung .o .content:hover{
+    opacity: 1;
+}
+.content h3{
+    color: white;
+    font-size: 25px;
+    padding: 20px 0px 5px 0px;
+    text-align: center;
+}
+.content p{
+    padding: 16px;
+    color: white;
+    text-align: center;
+    font-size: 13;
+    padding-top:0px ;
+}
+.content button{
+    padding: 7px 20px;
+    font-size: 20px;
+    background: transparent;
+    border: 1px solid white;
+    margin-left: 70px;
+     cursor: pointer;
+}
+.content button:hover{
+    color: red;
+    background: rgba(0, 0, 0, 0.5);
+
+}

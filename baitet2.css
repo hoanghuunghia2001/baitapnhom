@@ -1,0 +1,45 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: black;
+}
+.box{
+    width: 400px;
+    height: 250px;
+    background: linear-gradient(0deg,black,rgb(53, 53, 53));
+    margin: 250px auto 0;
+
+    position: relative;
+}
+.box:before,    
+.box:after{
+    content: "";
+    width:calc(100% + 4px);
+    height: calc(100% + 4px);
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
+    background-size: 400%;
+    z-index: -1;
+    animation: animate 20s linear infinite;
+  
+    position: absolute;
+}
+.box::after{
+    filter: blur(10px);
+}
+@keyframes animate 
+{
+    0%
+    {
+        background-position: 0 0 ;
+    }
+    50%
+    {
+        background-position: 300% 0 ;
+    }
+    100%
+    {
+        background-position: 0 0 ;
+    }
+}

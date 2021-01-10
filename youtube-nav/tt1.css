@@ -1,0 +1,202 @@
+/* code for top-nav */
+/* Äá»Šnh nghÄ©a biáº¿n */
+:root{
+  --icon-color:#dbdbdb;
+  --icon-size: 1.1em;
+  --search-box-background-color:  #303030;
+  --muted-icon-color: rgb(154,154,154);
+}
+/* xÃ³a bá» margin, padding máº·c Ä‘á»‹nh */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: beige;
+}
+.top-nav{
+  width: 100%;
+  height: 50px;
+  padding: 0 16px;
+  background-color: rgb(37,37,37);
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+i.fas{
+  color: var(--icon-color);
+  font-size: var(--icon-size);
+}
+.top-nav-logo{
+  height: 100%;
+  width: 15%;
+  background-color: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-nav-logo p{
+  color: white;
+  font-size: 1rem;
+}
+i.fab.fa-youtube{
+  display: block;
+  float: left;
+  color: red;
+  font-size: 1.5rem;
+  padding-right: 3px;
+}
+
+.top-nav form{
+  width: 71%;
+  height: 50%;
+  /* margin: 0 auto; */
+  /* background-color: rgb(255, 169, 169); */
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-nav-search{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-nav-search input[type="text"] {
+  height: 100%;
+  width: 50%;
+  background-color: var(--search-box-background-color);
+  color: #dbdbdb;
+  border: none;
+  box-sizing: border-box;
+  padding:5px;
+  font-size: 0.9rem;
+}
+.top-nav-search input[type="text"]:focus{
+  /* xÃ³a bá» outline máº·c Ä‘á»‹nh cá»§a input khi bá»‹ focus */
+  outline: none;
+}
+
+.top-nav-search .keyboard-icon{
+  height: 100%;
+  width: 5%;
+  background-color: var(--search-box-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-nav-search .keyboard-icon a{
+  text-decoration: none;
+}
+.keyboard-icon a span.far.fa-keyboard{
+  color: var(--icon-color);
+}
+.keyboard-icon a span.far.fa-keyboard:hover{
+  color:#e9e8e8;
+}
+form button.search-button{
+  width: 7%;
+  height: 100%;
+  background-color: rgb(54,54,54);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button.search-button .search-icon i{
+  font-size: 0.7rem;
+  color: var(--muted-icon-color);
+}
+.search-tooltip{
+  height: 120%;
+  width: 120%;
+  padding: 0 10px;
+  background-color: rgb(54,54,54);
+  border-radius: 2px;
+  color: white;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .25s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  left: 0px;
+  top: 40px;
+}
+button.search-button:focus{
+  outline:none;
+}
+button.search-button:hover .search-tooltip{
+  opacity: 1;
+  visibility: visible;
+}
+button.search-button:hover .search-icon i{
+  color: rgb(185, 185, 185);
+}
+.top-nav .top-nav-user-icon{
+  height: 100%;
+  width: 13%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-nav-user-icon .user-icon{
+  width: 25%;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-icon .user-avatar{
+  height: 1.7rem;
+  width: 1.7rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.user-avatar img{
+  height: 100%;
+  width: 100%;
+}
+span.video-tooltip, span.folder-tooltip, span.bell-tooltip {
+  height: 30px;
+  top: 53px;
+  left: -8px;
+  border-radius: 3px;
+  background-color: var(--search-box-background-color);
+}
+span.folder-tooltip{
+  width: 140px;
+  left: -40px;
+}
+span.bell-tooltip{
+  width: 80px;
+}
+.user-icon:hover span.video-tooltip{
+  opacity: 1;
+  visibility: visible;
+}
+.user-icon:hover span.folder-tooltip{
+  opacity: 1;
+  visibility: visible;
+}
+.user-icon:hover span.bell-tooltip{
+  opacity: 1;
+  visibility: visible;
+}
