@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+/*------------------------------------------------------------------*/
+body{
+    background-color: rgb(128, 128, 128);
+}
+.top-nav{
+    height: 2.5em;
+    width: 100%;
+    background-color: #4167b2;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 3em;
+    position: relative;
+
+    z-index: -2;
+}
+.container{
+height:auto ;
+width: auto;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+margin-right: 30em;
+position: absolute;
+}
+.top-nav .container .element{
+height:auto ;
+width: auto;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+
+/* position: absolute; */
+}
+.container .element .icon{
+    margin-right: 3em;
+    cursor: pointer;
+    font-size: 1.3em;
+    /* position: absolute; */
+}
+.container .element .icon:hover i{
+   color: white;
+}
+.container .element .content{
+    width: auto;
+    height: auto;
+   
+    top: 32px;
+    position: absolute;
+    
+}
+.container .element .content ul {
+    height: auto;
+    width: 9em;
+    border: 1px solid #636161;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+
+   
+}
+.container .element .content ul:after {
+    content: "";
+    height: 13px;
+    width: 13px;
+    background-color: #ffffff;
+    top: -5px;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 63px;
+
+    z-index: -1;
+}
+.container .element .content li {
+    list-style: none;
+    height: 2em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-family: sans-serif;
+    border-bottom:  1px solid #636161;
+    cursor: pointer;
+
+    /* position: absolute; */
+}
+.container .element .content li:hover{
+    background-color: #4167b2 ;
+    border-bottom:  1px solid #4167b2;
+}
+.container .element .content li:nth-child(3) {
+    border-bottom: none;
+}
+
